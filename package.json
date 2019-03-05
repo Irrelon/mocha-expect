@@ -1,0 +1,16 @@
+{
+  "name": "mocha-expect",
+  "version": "1.0.0",
+  "description": "An expect(x) number of assertions library for mocha.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^6.0.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "Irrelon Software Limited (Rob Evans)",
+  "license": "ISC"
+}
