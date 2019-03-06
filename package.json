@@ -1,6 +1,6 @@
 {
   "name": "mocha-expect",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A library to add expect(x) to unit tests written with mocha. Allows you to ensure the correct number of assertions were made in your tests.",
   "main": "index.js",
   "dependencies": {},
