@@ -1,3 +1,5 @@
+// We include and export mocha so you can just use this lib without having
+// to include mocha directly, e.g. const {describe, it} = require('mocha-expect');
 const mocha = require("mocha");
 const originalAssert = require("assert");
 
