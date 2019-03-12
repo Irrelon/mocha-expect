@@ -56,10 +56,14 @@ for (const i in originalAssert) {
 			// Copy the function as a wrap
 			assert[i] = (...args) => {
 				incrementAssertionCount();
-				return originalAssert[i].apply(originalAssert, args);
+				return originalAssert[i](...args);
 			};
 		}
 	}
+}
+
+if (!mocha.beforeEach) {
+	throw new Error("You are attempting to run mocha tests without using the mocha CLI. None of the mocha functions (describe, it, beforeEach etc) have been injected into this Node.js process so we cannot continue. Please run mocha as described in the documentation.");
 }
 
 mocha.beforeEach(reset);
@@ -69,8 +73,8 @@ module.exports = {
 	...mocha,
 	check,
 	reset,
-	expectedCount,
-	assertionCount,
 	expect,
-	assert
+	assert,
+	expectedCount,
+	assertionCount
 };

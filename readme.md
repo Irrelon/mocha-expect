@@ -5,6 +5,11 @@
 npm i mocha-expect --save-dev
 ```
 
+## PLEASE NOTE
+In order to use this library you MUST be running your tests via a mocha
+command line, not a Node.js process. Running your tests in any other way
+will result in errors like "mocha.beforeEach is not a function".
+
 ## Usage (Contrived Example)
 ```js
 const {describe, it, expect, assert} = require('mocha-expect');
